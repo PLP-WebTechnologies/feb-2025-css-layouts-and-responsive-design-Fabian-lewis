@@ -1,0 +1,172 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #1a1a1a;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navigation Bar */
+  header {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f0c040;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://via.placeholder.com/1400x400') center/cover no-repeat;
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    background-color: #f0c040;
+    padding: 0.75rem 1.5rem;
+    color: #222;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* About Section */
+  .about,
+  .contact {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #2a2a2a;
+    color: #ccc;
+  }
+  
+  .about p {
+    max-width: 700px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+  }
+  
+  /* Services Grid */
+  .services {
+    padding: 3rem 2rem;
+    background-color: #2a2a2a;
+    text-align: center;
+    color:#ccc
+  }
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    color: white;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .grid-layout {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .grid-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  }
+  
